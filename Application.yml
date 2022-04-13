@@ -1,8 +1,18 @@
+#eureka:
+ # client:
+  #  register-with-eureka: true
+   # fetch-registry: true
+    #eureka-service-url:
+     # defaultZone: http://localhost:8761/eureka/
+     # instance:
+      #  hostname: localhost
+        
 eureka:
+  instance:
+    hostname: eureka-0
+    preferIpAddress: true
   client:
     register-with-eureka: true
     fetch-registry: true
-    eureka-service-url:
-      defaultZone: http://localhost:8761/eureka/
-      instance:
-        hostname: localhost
+    serviceUrl:
+      defaultzone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
